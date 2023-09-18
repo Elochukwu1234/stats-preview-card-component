@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* VARIABLE CSS */
+:root{
+    /* Colors */
+    --body-background: hsl(233, 47%, 7%);
+    --card-background: hsl(244, 38%, 16%);
+    --insight: hsl(277, 64%, 61%);
+    --img-cover: hsla(277, 91%, 46%, 0.457);
+    --h3-color: hsl(0, 0%, 100%);
+    --p-color: hsla(0, 0%, 100%, 0.75);
+    --h4-color: hsla(0, 0%, 100%, 0.6);
+    /* Font Family*/
+    --h3-font: 'Lexend Deca', sans-serif;
+    --p-h4-font: 'Inter', sans-serif;
+}
+body{
+    background-color: var(--body-background);
+}
+main{
+    background-color: var(--card-background);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.card-img{
+    position: relative;
+}
+.img-cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 99%;
+    width: 100%;
+    z-index: 5;
+    background-color: var(--img-cover);
+}
+h3{
+    font-family: var(--h3-font);
+    font-weight: 700;
+    color: var(--h3-color);
+    font-size: 25px;
+}
+p{
+    font-family: var(--p-h4-font);
+    font-weight: 400;
+    color: var(--p-color);
+}
+.card-data > h3{
+    margin: 30px 0 15px;
+}
+.card-data > h3 span{
+    color: var(--insight);
+}
+.card-data > p{
+    font-size: 15px;
+    margin: 0 15px 40px;
+}
+.card-data .statistics h3{
+    margin-bottom: 10px;
+}
+.card-data .statistics h4{
+    color: var(--h4-color);
+    font-size: 15px;
+    font-family: var(--p-h4-font);
+    margin-bottom: 25px;
+}
+
+/* Mobile view */
+@media only screen and (min-width : 375px){
+    .img-cover{
+        height: 99.5%;
+    }
+    .card-data > p{
+        margin: 0 45px 40px;
+    }
+}
+
+/* Tablet view */
+@media only screen and (min-width : 768px){
+    h3{
+        font-size: 45px;
+    }
+    .card-data > h3{
+        margin: 45px 0 30px;
+        padding: 0 50px;
+    }
+    .card-data > p{
+        font-size: 25px;
+        margin: 0 65px 60px;
+    }
+    .card-data .statistics h3{
+        margin-bottom: 15px;
+    }
+    .card-data .statistics h4{
+        font-size: 20px;
+        margin-bottom: 45px;
+    }
+}
+
+/* Desktop view */
+@media only screen and (min-width : 1280px){
+    main{
+        flex-direction: row-reverse;
+        width: 1000px;
+        margin: 150px auto;
+        text-align: left;
+    }
+    .card-data{
+        border-radius: 20px 0 0 20px;
+    }
+    .card-img{
+        border-radius: 0 20px 20px 0;
+    }
+    .card-img, .card-data{
+        width: 500px;
+        height: 400px;
+    }
+    .img-cover{
+        height: 100%;
+    }
+    h3{
+        font-size: 27.5px;
+    }
+    .card-data .statistics{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 45px;
+    }
+    .card-data > h3{
+        margin: 45px 0 30px;
+        padding: 0 50px;
+    }
+    .card-data > p{
+        font-size: 17.5px;
+        margin: 0 45px 45px;
+        line-height: 30px;
+    }
+    .card-data .statistics h3{
+        margin-bottom: 5px;
+    }
+    .card-data .statistics h4{
+        font-size: 15px;
+        margin-bottom: auto;
+    }
+}
+
